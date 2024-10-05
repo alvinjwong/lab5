@@ -81,7 +81,7 @@ void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeig
   sf::Color colors[] = {sf::Color::Red, sf::Color::Blue, sf::Color::Green};
 
 
-  colorChange = colorSpeed * deltaTime;
+  colorChange += colorSpeed * deltaTime;
 
   if (colorChange > 1.0f) {
     currentColor = (currentColor + 1) % 3;
