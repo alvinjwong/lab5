@@ -64,6 +64,7 @@ void update(float deltaTime, int screenWidth, int screenHeight);
 //TODO Define the CustomSaver class as a child class of ScreenSaver
 //  Define the Constructor CustomSaver(float someFloat, sf::Vector2f someVector, float someOtherFloat)
 //    NOTE: Since the behavior of this class is up to you, the way you use these parameters in the constructor is up to you.
+//yellow circle moving in a circle.
 class CustomSaver : public ScreenSaver {
   private:
   float someFloat;

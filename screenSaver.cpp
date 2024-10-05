@@ -5,6 +5,7 @@
 #include <iostream>
 #include <cmath>
 
+//done
 //Self-explanatory
 ScreenSaver::ScreenSaver() {
   shape = sf::CircleShape(10.f);
