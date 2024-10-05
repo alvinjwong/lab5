@@ -78,13 +78,13 @@ ClassicSaver(radius, velocity, sf::Color::Red), colorSpeed(colorSpeed), currentC
 
 void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeight) {
   ClassicSaver::update(deltaTime, screenWidth, screenHeight);
-  sf::Color colors[] = {sf::Color::Red, sf::Color::Blue, sf::Color::Green, sf::Color::Purple};
+  sf::Color colors[] = {sf::Color::Red, sf::Color::Blue, sf::Color::Green};
 
 
   colorChange = colorSpeed * deltaTime;
 
   if (colorChange > 1.0f) {
-    currentColor = (currentColor + 1) % 4;
+    currentColor = (currentColor + 1) % 3;
     getShape().setFillColor(colors[currentColor]);
     colorChange = 0.0f;
   }
