@@ -96,7 +96,7 @@ ScreenSaver(someFloat, someVector, sf::Color::Yellow), someFloat(someFloat), som
 someOtherFloat(someOtherFloat) {}
 
 void CustomSaver::update(float deltaTime, int screenWidth, int screenHeight) {
-  float angle = deltaTime * someOtherFloat * .01f;
+  float angle = deltaTime * 5.0f * .01f;
   float radius = 100.0f;
   float centerX = screenWidth / 2.0f;
   float centerY = screenHeight / 2.0f;
