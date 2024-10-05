@@ -92,7 +92,7 @@ void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeig
 }
 
 CustomSaver::CustomSaver(float someFloat, sf::Vector2f someVector, float someOtherFloat) :
-ScreenSaver(someFloat, someVector, sf::Color::Yellow), somefloat(someFloat) someVector(someVector),
+ScreenSaver(someFloat, someVector, sf::Color::Yellow), someFloat(someFloat) someVector(someVector),
 someOtherFloat(someOtherFloat) {}
 
 void CustomSaver::update(float deltaTime, int screenWidth, int screenHeight) {
