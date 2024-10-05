@@ -74,13 +74,12 @@ void ClassicSaver::update(float deltaTime, int screenWidth, int screenHeight) {
 }
 
 ColorChangingSaver::ColorChangingSaver(float radius, sf::Vector2f velocity, float colorSpeed) : 
-ClassicSaver(radius, velocity, sf::Color::Red), colorSpeed(colorSpeed) {}
+ClassicSaver(radius, velocity, sf::Color::Red), colorSpeed(colorSpeed), currentColor(0), colorChange(0.0f) {}
 
 void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeight) {
   ClassicSaver::update(deltaTime, screenWidth, screenHeight);
   sf::Color colors[] = {sf::Color::Red, sf::Color::Blue, sf::Color::Green, sf::Color::Purple};
-  int currentColor = 0;
-  float colorChange = 0.0f;
+
 
   colorChange = colorSpeed * deltaTime;
 

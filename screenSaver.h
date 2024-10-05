@@ -54,6 +54,8 @@ class ClassicSaver : public ScreenSaver {
 class ColorChangingSaver : public ClassicSaver {
   private:
   float colorSpeed;
+  int currentColor;
+  float colorChange;
 public:
 ColorChangingSaver(float radius, sf::Vector2f velocity, float colorSpeed);
 void update(float deltaTime, int screenWidth, int screenHeight);
