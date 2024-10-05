@@ -64,3 +64,11 @@ void ScreenSaver::checkWallCollision(int screenWidth, int screenHeight){
 
 
 //TODO Define all necessary member functions for ClassicSaver, ColorChangingSaver, and CustomSaver Here
+//https://learn.microsoft.com/en-us/cpp/cpp/constructors-cpp?view=msvc-170
+ClassicSaver::ClassicSaver(float radius, sf::Vector2f velocity, sf::Color color) : 
+ScreenSaver(radius, velocity, color) {}
+
+void ClassicSaver::update(float deltaTime, int screenWidth, int screenHeight) {
+  getShape().move(velocity.x * deltaTime, velocity.y * deltaTime);
+  checkWallCollision(screenWidth, screenHeight);
+}
