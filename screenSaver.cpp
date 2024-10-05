@@ -83,7 +83,7 @@ void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeig
 
   colorChange = colorSpeed * deltaTime;
 
-  if (colorChange > 10.0f) {
+  if (colorChange > 0.5f) {
     currentColor = (currentColor + 1) % 3;
     getShape().setFillColor(colors[currentColor]);
     colorChange = 0.0f;
