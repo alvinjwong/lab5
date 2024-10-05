@@ -72,3 +72,10 @@ void ClassicSaver::update(float deltaTime, int screenWidth, int screenHeight) {
   getShape().move(velocity.x * deltaTime, velocity.y * deltaTime);
   checkWallCollision(screenWidth, screenHeight);
 }
+
+ColorChangingSaver::ColorChangingSaver(float radius, sf::Vector2f velocity, float colorSpeed) : 
+ClassicSaver(radius, velocity, sf::Color::Red), colorSpeed(colorSpeed) {}
+
+void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeight) {
+  ClassicSaver::update(deltaTime, screenWidth, screenHeight);
+}
