@@ -97,9 +97,9 @@ someOtherFloat(someOtherFloat) {}
 
 void CustomSaver::update(float deltaTime, int screenWidth, int screenHeight) {
   float angle = deltaTime * someOtherFloat * .001;
-  float radius = 1000.0f;
-  float centerX = screenWidth / 2.0;
-  float centerY = screenHeight / 2.0;
+  float radius = 100.0f;
+  float centerX = screenWidth / 2.0f;
+  float centerY = screenHeight / 2.0f;
 
   float x = centerX + radius * std::cos(angle);
   float y = centerY + radius * std::sin(angle);
