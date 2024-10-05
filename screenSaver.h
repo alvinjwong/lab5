@@ -72,6 +72,6 @@ class CustomSaver : public ScreenSaver {
   public:
   CustomSaver(float someFloat, sf::Vector2f someVector, float someOtherFloat);
   void update(float deltaTime, int screenWidth, int screenHeight);
-}
+};
 
 #endif
