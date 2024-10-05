@@ -83,7 +83,7 @@ void ColorChangingSaver::update(float deltaTime, int screenWidth, int screenHeig
 
   colorChange = colorSpeed * deltaTime;
 
-  if (colorChange > 4.0f) {
+  if (colorChange > 1.0f) {
     currentColor = (currentColor + 1) % 3;
     getShape().setFillColor(colors[currentColor]);
     colorChange = 0.0f;
@@ -96,7 +96,7 @@ ScreenSaver(someFloat, someVector, sf::Color::Yellow), someFloat(someFloat), som
 someOtherFloat(someOtherFloat) {}
 
 void CustomSaver::update(float deltaTime, int screenWidth, int screenHeight) {
-  float angle = deltaTime * someOtherFloat * .1f;
+  float angle = deltaTime * someOtherFloat * .01f;
   float radius = 100.0f;
   float centerX = screenWidth / 2.0f;
   float centerY = screenHeight / 2.0f;
