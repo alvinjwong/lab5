@@ -42,13 +42,34 @@ public:
 //TODO Define the ClassicSaver class as a child class of ScreenSaver
 //  Define the Constructor ClassicSaver(float radius, sf::Vector2f velocity, sf::Color color)
 //  override the update function from ScreenSaver, and define the intended functionality
+class ClassicSaver : public ScreenSaver {
+  public:
+  ClassicSaver(float radius, sf::Vector2f velocity, sf::Color color);
+  void update(float deltaTime, int screenWidth, int screenHeight);
+};
 
 //TODO Define the ColorChangingSaver class as a child class of ClassicSaver (Multiple Inheritance)
 //  Define the Constructor ColorChangingSaver(float radius, sf::Vector2f velocity, float colorSpeed)
 //  override the update function from ClassicSaver, and define the intended functionality
+class ColorChangingSaver : public ClassicSaver {
+  private:
+  float colorSpeed;
+public:
+ColorChangingSaver(float radius, sf::Vector2f velocity, float colorSpeed);
+void update(float deltaTime, int screenWidth, int screenHeight);
+};
 
 //TODO Define the CustomSaver class as a child class of ScreenSaver
 //  Define the Constructor CustomSaver(float someFloat, sf::Vector2f someVector, float someOtherFloat)
 //    NOTE: Since the behavior of this class is up to you, the way you use these parameters in the constructor is up to you.
+class CustomSaver : public ScreenSaver {
+  private:
+  float someFloat;
+  sf::Vector2f someVector;
+  float someOtherFloat;
+  public:
+  CustomSaver(float someFloat, sf::Vector2f someVector, float someOtherFloat);
+  void update(float deltaTime, int screenWidth, int screenHeight);
+}
 
 #endif
